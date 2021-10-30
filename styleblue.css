@@ -1,0 +1,264 @@
+
+*{
+   
+    scroll-behavior: smooth;
+}
+body{
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* -----NAV----- */
+
+nav{
+    height: 7vh;
+    width: 100%;
+    padding-left: 3%;
+    position: fixed;
+    background-color: white;
+    z-index: 1;
+}
+nav div, ul{
+    float: left;
+}
+.logo a{
+    font-family: 'Dancing Script', cursive;
+    font-size: 30px;
+    color: black;
+}
+.logo a:hover{
+    text-decoration: none;
+    color: black;
+}
+.menu{
+    float: right;
+    margin-right: 170px;
+}
+.menu li{
+    float: left;
+    padding-top: 18px;
+    margin-left: 55px;
+    list-style: none;
+}
+.menu li .item{
+    color: grey;
+    text-decoration: none;
+    font-family: 'Xanh Mono', monospace;
+}
+.menu li .item:hover{
+    color: black;
+}
+
+#menu-checkbox, .hamburger, .close{
+    visibility: hidden;
+}
+.line{
+    visibility: hidden;
+}
+/* -----CONTAINERS----- */
+
+.titre{
+    width: 100%;
+    text-align: center;
+    font-family: 'Xanh Mono', monospace; 
+    height: 10vh;
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+#container-fluid{
+    
+    margin-top: 50px;
+    width: 100%;
+    display: table; 
+  width: 100%; 
+  table-layout: fixed; 
+  word-spacing: -2em;
+    
+}
+#container-fluid div{
+    display: inline-block;
+    width: 33.33%;
+    height: 450px;
+}
+#container-fluid img{
+    width: 100%;
+    height:450px;
+}
+#container-fluid img:hover {
+    
+    opacity: 0.4;
+}
+
+@media(max-width : 1024px){
+    #container-fluid div{
+        float: left;
+         width: 33.3%;
+         height: 400px;
+     }
+     #container-fluid img{
+         width: 100%;
+         height:400px;
+     } 
+}
+@media(max-width : 992px){
+    nav{
+        top: 0;
+    }
+    .logo{
+        margin-left: 25px;
+        z-index: 1;
+        position: relative;
+    }
+    .menu{
+        float: none;
+        display: none;
+        position: absolute;
+        float: left;
+        width: 100%;
+    }
+    .menu li{
+        margin-bottom: 18px;
+    }
+    #menu-checkbox {
+        padding-top: 35px;
+        margin-left: 150px;
+        position: absolute;
+        visibility: visible;    
+    }
+    .hamburger {
+        padding-top: 5px;
+        margin-left: 65%;
+        position: absolute;
+        visibility: visible; 
+    }
+    .close {
+        padding-top: 5px;
+        margin-left: 65%;
+        position: absolute;
+        visibility: hidden;
+    }
+    
+    .menu-checkbox:checked ~ .menu{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        float: none;
+        padding-left: 0px;
+        padding-top: 100px;
+        height: 100vh;
+        background-color: black;
+        opacity: 1;
+        z-index: 2;
+        text-align: center;
+        margin: 0;
+    }
+    .menu-checkbox:checked ~ .menu a{
+        display: flex;
+        flex-direction: column;
+        color: white;
+        width: 100%;
+        font-size: 20px;
+    }
+    .menu-checkbox {
+        opacity: 0;
+        position: absolute;
+        top: -1000px;
+    }
+    .menu-checkbox:checked ~ .hamburger{
+        visibility: hidden;
+    }
+    .menu-checkbox:checked ~ .close{
+        visibility: visible;
+        z-index: 3;
+    }
+    
+    .line{
+        visibility: visible;
+        width: 100%;
+        height: 1px;
+        background-color: grey;
+        margin-left: 0 auto !important;
+        margin-right: 0 auto !important;
+    }
+
+    #container-fluid div{
+        float: left;
+         width: 33.3%;
+         height: 300px;
+     }
+     #container-fluid img{
+         width: 100%;
+         height:300px;
+     } 
+}
+@media(max-width : 768px){
+    .logo a{
+        font-size: 20px;
+    }
+
+    #container-fluid div{
+        float: left;
+         width: 50%;
+         height: 400px;
+     }
+     #container-fluid img{
+         width: 100%;
+         height:400px;
+     } 
+}
+@media(max-width : 600px){
+    .hamburger{
+        margin-left: 50%;
+    }
+    .close{
+        margin-left: 50%;
+    }
+
+    #container-fluid div{
+        float: left;
+         width: 100%;
+         height: 400px;
+     }
+     #container-fluid img{
+         width: 100%;
+         height:400px;
+     } 
+     footer{
+        text-align: center;
+    }
+    footer div{
+        display: block;
+        float: none;
+    }
+    .link{
+        width: 100%;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -----FOOTER -----*/
+
+.footer-copyright{
+    display: block;
+    bottom: 0vh;
+    background-color: black ;
+    color: white;
+}
+.footer-copyright a{
+    color: white;
+}
